@@ -564,3 +564,7 @@
 .footer .copyright a:hover {
     color: #FFFFFF;
 }
+
+.topbar-logo-text {
+    font-size: 50px;
+}
