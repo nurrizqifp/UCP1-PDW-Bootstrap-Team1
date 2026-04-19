@@ -568,3 +568,225 @@
 .topbar-logo-text {
     font-size: 50px;
 }
+
+
+/*** Experience Badge ***/
+.experience-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(205, 95, 55, 0.10) 0%, rgba(205, 95, 55, 0.18) 100%);
+    border: 1.5px solid rgba(205, 95, 55, 0.35);
+    color: var(--bs-primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 18px 6px 14px;
+    border-radius: 100px;
+    backdrop-filter: blur(4px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.experience-badge:hover {
+    box-shadow: 0 4px 18px rgba(205, 95, 55, 0.22);
+    transform: translateY(-1px);
+}
+
+.experience-badge .badge-icon {
+    font-size: 0.72rem;
+    color: var(--bs-primary);
+    line-height: 1;
+    opacity: 0.85;
+}
+
+
+/*** About Image ***/
+.about-image {
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    max-width: 360px;
+    width: 100%;
+}
+
+@media (max-width: 767.98px) {
+    .about-image {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+/*** Product Catalog Cards (Wardah / Beauty Products) ***/
+.product-catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 28px;
+    padding: 12px 0;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 18px 24px;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.04),
+        0 8px 24px rgba(0, 0, 0, 0.07);
+    transition: transform 0.32s ease, box-shadow 0.32s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.08),
+        0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.04);
+}
+
+.product-card .product-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #2d2d2d;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.product-card .product-brand {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+    margin-bottom: 10px;
+    opacity: 0.85;
+}
+
+.product-card .product-price {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+@media (max-width: 575.98px) {
+    .product-catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .product-card {
+        padding: 14px 12px 18px;
+    }
+
+    .product-card img {
+        max-height: 150px;
+    }
+
+    .product-card .product-name {
+        font-size: 0.82rem;
+    }
+}
+
+
+/*** Team Experts Grid (CSS Grid — 3 col desktop, 2 col tablet, 1 col mobile) ***/
+.team-experts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: start;
+    width: 100%;
+}
+
+@media (max-width: 991.98px) {
+    .team-experts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .team-experts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.team-experts-grid .team-item {
+    width: 100%;
+}
+
+
+/*** Middle-Align Layout — Section Containers ***/
+.s-section-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Ensure main block container rows center their items */
+.row.justify-content-center {
+    justify-content: center !important;
+}
+
+/* Center text inside section headings */
+.text-center.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Ensure about section aligns items top when side-by-side */
+.row.g-5.align-items-center {
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*** Instagram Follow Header ***/
+.instagram-header {
+    background: linear-gradient(135deg, #fff5f5 0%, #fff0f7 100%);
+    border-bottom: 1px solid rgba(205, 95, 55, 0.12);
+}
+
+.instagram-follow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: var(--bs-primary);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    padding: 8px 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.instagram-follow-link:hover {
+    opacity: 0.78;
+    transform: translateY(-1px);
+    color: var(--bs-primary);
+}
+
+.instagram-follow-link .fa-instagram {
+    font-size: 1.3rem;
+}
