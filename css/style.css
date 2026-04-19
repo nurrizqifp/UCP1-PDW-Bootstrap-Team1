@@ -366,15 +366,16 @@
 /*** Team ***/
 .team {
     position: relative;
+    padding-bottom: 15rem;
 }
 
 .team::after {
     position: absolute;
     content: "";
     width: 100%;
-    height: 110px;
+    height: 400px;
     left: 0;
-    bottom: 3rem;
+    bottom: 0;
     background: var(--bs-light);
     z-index: -1;
 }
@@ -382,6 +383,8 @@
 .team .team-item {
     position: relative;
     overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .team .team-item img {
@@ -396,7 +399,7 @@
 }
 
 .team .team-text {
-    height: 110px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -405,10 +408,15 @@
 .team .team-text-overflow {
     position: absolute;
     width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     left: 0;
     bottom: -50px;
     opacity: 0;
     transition: .5s;
+    background: var(--bs-light);
 }
 
 .team .team-item:hover .team-text-overflow {
@@ -707,7 +715,7 @@
 }
 
 
-/*** Team Experts Grid (CSS Grid — 3 col desktop, 2 col tablet, 1 col mobile) ***/
+/*** Team Experts Grid (CSS Grid ΓÇö 3 col desktop, 2 col tablet, 1 col mobile) ***/
 .team-experts-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -733,7 +741,7 @@
 }
 
 
-/*** Middle-Align Layout — Section Containers ***/
+/*** Middle-Align Layout ΓÇö Section Containers ***/
 .s-section-center {
     display: flex;
     flex-direction: column;
